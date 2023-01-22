@@ -521,3 +521,11 @@ body .dribbble img {
   margin-right: 3PX;
 } */
 
+
+@media screen and (min-width: 2500px) {
+  .products-full-container {
+    padding: 100px 0px 0px 100px;
+    width: 1500px;
+  }
+}
+

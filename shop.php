@@ -177,6 +177,12 @@ include 'nav.php';
 
                 ?>
 
+                <?php
+
+                include('next.php');
+
+                ?>
+
             </div>
 
         </section>
