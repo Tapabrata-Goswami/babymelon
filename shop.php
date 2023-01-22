@@ -129,16 +129,16 @@ include 'nav.php';
 
                 ?>
 
-<div class="nextpage-navigation" style="margin-bottom: 50px;">
-    <ul class="pagination">
-      <li class="pageNumber active"><a href="" class="nextpage-anchor">1</a></li>
-      <li class="pageNumber"><a href="" class="nextpage-anchor">2</a></li>
-      <li class="pageNumber"><a href="" class="nextpage-anchor">3</a></li>
-      <!-- <li class="pageNumber"><a href="">4</a></li>
+                <div class="nextpage-navigation" style="margin-bottom: 50px;">
+                    <ul class="pagination">
+                        <li class="pageNumber active"><a href="" class="nextpage-anchor">1</a></li>
+                        <li class="pageNumber"><a href="" class="nextpage-anchor">2</a></li>
+                        <li class="pageNumber"><a href="" class="nextpage-anchor">3</a></li>
+                        <!-- <li class="pageNumber"><a href="">4</a></li>
         <li class="pageNumber"><a href="">5</a></li>
         <li class="pageNumber"><a href="">6</a></li> -->
-    </ul>
-  </div>
+                    </ul>
+                </div>
 
             </div>
 
