@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+*{
+    transition: all 0.4s ease;
+
+}
+.head-blank-area{
+    width: 100%;
+    height: 40px;
+    background-color: #E00D7B;
+}
+
+.nav-main-header{
+    height: 70px;  
+    width: 100%;
+    background-color: white;
+    box-shadow: 0px 10px 36px rgba(27, 27, 27, 0.15); 
+    position: sticky;
+    top: 0; 
+    /* margin: 0 auto;
+    padding: 0 30px; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 99999;
+}
+.nav-logo{
+    height: 50px;
+    width: 50px;
+    background-image: url(./bm_logo.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    float: left;
+    margin: 0px 30px;
+}
+.nav-list{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0px 30px;
+}
+
+.nav-lists-item{
+display: inline-block; 
+margin: 0 20px; 
+color: #E00D7B;
+}
+
+.nav-lists-anchor{
+    text-decoration: none; 
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1rem; 
+    font-weight: bold; 
+    color: black;
+
+} 
+.nav-lists-item ::after{
+    content: "";
+    height: 3px;
+    width: 0;
+    background:#E00D7B; 
+    position:absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.4s;
+} 
+.nav-lists-item :hover::after{
+    width: 100%;
+} 
+
+.other-color{
+    color: #E00D7B;
+}
+.other-item-color{ 
+    color: black;
+
+}.nav-lists-anchor:hover{
+    color: #B8CF57;
+    transition: 0.3s;
+} 
+
+.account-bag-wish-options{
+    float: right;
+    
+}
+.user-account, .user-bag{
+    float: right;
+    text-align: center;
+    
+}
+.account-bag-wish-anchor{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+.user-bottom-text, .bag-bottom-text, .wishlist-bottom-text{
+    font-weight: bold;
+    font-size: 1.0rem;
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+    margin: 0px 28px;
+
+}
+
+/* @media(min- 1080){
+    //disapear
+} */
