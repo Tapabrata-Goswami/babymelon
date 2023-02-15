@@ -3,7 +3,7 @@
 $server_url_index = $_SERVER['HTTP_HOST'];
 
 // Local Server
-$for_local = '/babymelon_website/';
+$for_local = '/babymelon/';
 
 // Conection Details
 $servername = "localhost";
