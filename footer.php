@@ -14,18 +14,18 @@ include "footer.css";
 			<div class="bottom-footer-col">
 				<h4>company</h4>
 				<ul class="bottom-footer-full-list">
-					<li class="bottom-footer-list"><a href="#" class="all-social-lick-anchor">about us</a></li>
+					<li class="bottom-footer-list"><a href="./about.php" class="all-social-lick-anchor">about us</a></li>
 					<li class="bottom-footer-list"><a href="#" class="all-social-lick-anchor">our services</a></li>
-					<li class="bottom-footer-list"><a href="#" class="all-social-lick-anchor">privacy policy</a></li>
-					<li class="bottom-footer-list"><a href="#" class="all-social-lick-anchor">affiliate program</a></li>
+					<li class="bottom-footer-list"><a href="./privacy-policy.php" class="all-social-lick-anchor">privacy policy</a></li>
+					<li class="bottom-footer-list"><a href="./terms-conditions.php" class="all-social-lick-anchor">Terms & Conditions</a></li>
 				</ul>
 			</div>
 			<div class="bottom-footer-col">
 				<h4>get help</h4>
 				<ul class="bottom-footer-full-list">
-					<li class="bottom-footer-list"><a href="#" class="all-social-lick-anchor">FAQ</a></li>
-					<li class="bottom-footer-list"><a href="#" class="all-social-lick-anchor">shipping</a></li>
-					<li class="bottom-footer-list"><a href="#" class="all-social-lick-anchor">returns</a></li>
+					<li class="bottom-footer-list"><a href="./faq.php" class="all-social-lick-anchor">FAQ</a></li>
+					<li class="bottom-footer-list"><a href="./shipping-policy.php" class="all-social-lick-anchor">Shipping Policy</a></li>
+					<li class="bottom-footer-list"><a href="./return-refund-policy.php" class="all-social-lick-anchor">Return & Refund Policy</a></li>
 					<li class="bottom-footer-list"><a href="#" class="all-social-lick-anchor">order status</a></li>
 					<li class="bottom-footer-list"><a href="#" class="all-social-lick-anchor">payment options</a></li>
 				</ul>

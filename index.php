@@ -1,31 +1,31 @@
 <?php
 
-    //Including NavBar 
+//Including NavBar 
 
-    include('nav.php');
-
-
-    // Conection Details
-
-    $servername = "localhost";
-    $username = "root";
-    $password = "";
-    $database = "babymelon";
+include('nav.php');
 
 
-    // Conection Checking
+// Conection Details
 
-    $database_conection = mysqli_connect($servername, $username, $password, $database);
+$servername = "localhost";
+$username = "root";
+$password = "";
+$database = "babymelon";
 
-    // Conection True
 
-    // if($database_conection){
-    //     echo '<div>Conection Done</div>';
-    // }else{
-    //     echo '<div>Conection Error!</div>';
-    // }
-    
-    mysqli_close($database_conection);
+// Conection Checking
+
+$database_conection = mysqli_connect($servername, $username, $password, $database);
+
+// Conection True
+
+// if($database_conection){
+//     echo '<div>Conection Done</div>';
+// }else{
+//     echo '<div>Conection Error!</div>';
+// }
+
+mysqli_close($database_conection);
 
 ?>
 
