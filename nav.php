@@ -1,4 +1,6 @@
 <?php
+
+// session_start();
 // Live server 
 $server_url_index = $_SERVER['HTTP_HOST'];
 
@@ -64,10 +66,11 @@ if ($base_name == 'index.php') {
             </ul>
 
 
+
         </div>
         <div class="account-bag-wish-options">
             <div class="user-account">
-                <a href="login-signup.php" class="account-bag-wish-anchor">
+                <a href="<?php echo htmlspecialchars($account_link); ?>" class="account-bag-wish-anchor">
                     <i class="fa-regular fa-user"></i>
                     <p class="user-bottom-text">account</p>
                 </a>

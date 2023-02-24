@@ -1,4 +1,9 @@
 <?php
+// session_start();
+?>
+
+<?php
+session_start();
 
 // Navbar including
 include('nav.php');
@@ -12,66 +17,66 @@ $dbname = "babymelon";
 $name = $contact_number = $email = $user_password = $conforim_password = "";
 
 // Data collect to user by form
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-  $name = $_POST["name"];
-  // $contact_number = $_POST["contact_number"];
-  $email = $_POST["email"];
-  $user_password = $_POST["u_password"];
-  $conforim_password = $_POST["u_conforim_password"];
+// if ($_SERVER["REQUEST_METHOD"] == "POST") {
+//   $name = $_POST["name"];
+//   // $contact_number = $_POST["contact_number"];
+//   $email = $_POST["email"];
+//   $user_password = $_POST["u_password"];
+//   $conforim_password = $_POST["u_conforim_password"];
 
-  // Conection checking in database 
-  $conection_check = mysqli_connect($servername, $username, $password, $dbname);
+//   // Conection checking in database 
+//   $conection_check = mysqli_connect($servername, $username, $password, $dbname);
 
-  if (!$conection_check) {
-    die("Connection failed: " . mysqli_connect_error());
-    echo '<div class="alert alert-danger" role="alert">
-        This is a danger alert—check it out! -- 1
-      </div>';
-  } else {
+//   if (!$conection_check) {
+//     die("Connection failed: " . mysqli_connect_error());
+//     echo '<div class="alert alert-danger" role="alert">
+//         This is a danger alert—check it out! -- 1
+//       </div>';
+//   } else {
 
-    // Checking same email
-    $log_data = "SELECT phonenumber,email FROM `bm_user`;";
-    $data_fetch = mysqli_query($conection_check, $log_data);
-    if (mysqli_num_rows($data_fetch) > 0) {
-      // output data of each row
-      while ($row = mysqli_fetch_assoc($data_fetch)) {
-        if ($email == $row['email']) {
-          exit('YOUR EMAIL ALREADY EXIST!');
-        } else {
+//     // Checking same email
+//     $log_data = "SELECT phonenumber,email FROM `bm_user`;";
+//     $data_fetch = mysqli_query($conection_check, $log_data);
+//     if (mysqli_num_rows($data_fetch) > 0) {
+//       // output data of each row
+//       while ($row = mysqli_fetch_assoc($data_fetch)) {
+//         if ($email == $row['email']) {
+//           exit('YOUR EMAIL ALREADY EXIST!');
+//         } else {
 
-          if ($user_password == $conforim_password) {
+//           if ($user_password == $conforim_password) {
 
-            // Data send in database
-            $data = "INSERT INTO `bm_user` ( `name`, `phonenumber`, `email`, `password`) VALUES ('$name', '$contact_number', '$email', '$user_password')";
+//             // Data send in database
+//             $data = "INSERT INTO `bm_user` ( `name`, `phonenumber`, `email`, `password`) VALUES ('$name', '$contact_number', '$email', '$user_password')";
 
-            $data_insert = mysqli_query($conection_check, $data);
+//             $data_insert = mysqli_query($conection_check, $data);
 
-            if (!$data_insert) {
-              echo '<div class="alert alert-danger" role="alert">
-                      This is a danger alert—check it out! --- 2
-                      </div>';
-              echo "Error: " . $data . "<br>" . mysqli_error($conection_check);
-            } else {
-              echo '<div class="alert alert-success" role="alert">
-                      This is a success alert—check it out!
-                      </div>';
+//             if (!$data_insert) {
+//               echo '<div class="alert alert-danger" role="alert">
+//                       This is a danger alert—check it out! --- 2
+//                       </div>';
+//               echo "Error: " . $data . "<br>" . mysqli_error($conection_check);
+//             } else {
+//               echo '<div class="alert alert-success" role="alert">
+//                       This is a success alert—check it out!
+//                       </div>';
 
-              // in this part we embbded the js in php
-              echo '<script>window.open("http://localhost/babymelon_website/shop.php", "_self"); </script>';
-            }
-          }
-        }
-      }
-    }
-  }
-  mysqli_close($conection_check);
-}
+//               // in this part we embbded the js in php
+//               echo '<script>window.open("http://localhost/babymelon/account.php", "_self"); </script>';
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }
+//   mysqli_close($conection_check);
+// }
 
 
 
 
 // login Request to database
-if ($_SERVER["REQUEST_METHOD"] == "post") {
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   $log_email = $log_password = "";
 
   $log_email = $_POST['log_email'];
@@ -82,20 +87,17 @@ if ($_SERVER["REQUEST_METHOD"] == "post") {
   if (!$conection_check) {
     echo "SORRY! SERVER PROBLEM.";
   } else {
-    $log_data = "SELECT email, password FROM `bm_user`;";
+    $log_data = "SELECT name, email, password FROM `bm_user`;";
     $data_fetch = mysqli_query($conection_check, $log_data);
-
     if (mysqli_num_rows($data_fetch) > 0) {
       // output data of each row
       while ($row = mysqli_fetch_assoc($data_fetch)) {
-        if (($log_email == $row['email']) and ($log_password == $row['password'])) {
-          echo '<script>window.open("http://localhost/babymelon_website/shop.php", "_self"); </script>';
-        } else {
-          echo "SORRY!";
+        if (($log_email === $row['email']) and ($log_password === $row['password'])) {
+          $_SESSION['user_name'] = $row['name'];
+          // header('Location:account.php');
+          echo '<script>window.open("http://localhost/babymelon/account.php", "_self"); </script>';
         }
       }
-    } else {
-      echo "0 results";
     }
     mysqli_close($conection_check);
   }
@@ -114,11 +116,11 @@ if ($_SERVER["REQUEST_METHOD"] == "post") {
     <div class="signin-signup">
 
       <!-- sign in /Log in form -->
-      <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="POST" class="sign-in-form">
+      <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post" class="sign-in-form">
         <h2 class="title">Sign in</h2>
         <div class="input-field">
           <i class="fas fa-user"></i>
-          <input type="text" placeholder="Username" name="log_email" />
+          <input type="eamil" placeholder="Email" name="log_email" />
         </div>
         <div class="input-field">
           <i class="fas fa-lock"></i>
