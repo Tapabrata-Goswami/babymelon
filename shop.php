@@ -138,15 +138,7 @@ include 'nav.php';
 
 
                 ?>
-<!-- Next page Navigation -->
-<div class="nextpage-navigation" style="margin-bottom: 50px;">
-    <ul class="pagination">
-      <li class="pageNumber active"><a href="" class="nextpage-anchor">1</a></li>
-      <li class="pageNumber "><a href="2shop.php" class="nextpage-anchor">2</a></li>
-      <li class="pageNumber"><a href="" class="nextpage-anchor">3</a></li>
-    </ul>
-  </div>
-<!-- Next page Naviation end  -->
+
 
             </div>
 
