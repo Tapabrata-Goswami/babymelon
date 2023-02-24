@@ -7,9 +7,7 @@ include 'nav.php';
 ?>
 
 <style>
-    <?php
-    include "shop.css";
-    ?>.fa-solid {
+.fa-solid {
         color: #ffffff;
     }
 </style>
