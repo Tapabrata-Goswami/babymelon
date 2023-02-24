@@ -3,6 +3,9 @@
 ?>
 
 <style>
+    /* body{
+        padding-bottom:0;
+    } */
     .contact-us-page{
         width:100%;
         font-family:'Poppins';
@@ -30,6 +33,7 @@
         display:flex;
         justify-content:center;
         padding:50px 0px;
+        /* background-color: #f4eeff; */
         /* background-color:#abb8c3; */
         /* background-image:url("./img/contactus.jpeg");
         background-size:cover;
@@ -42,24 +46,32 @@
     .top-part-map{
         width:50%;
     }
+    .contact-us-info{
+        background-color: #f4eeff;
+    }
     .top-part-heading-info{
         margin-bottom:12px;
     }
     .top-part-heading-info span{
-        color:#16003B;
+        color:#E00D7B;
         font-size:25px;
         font-weight:600;
     }
     .top-part-legal-container{
         margin-bottom:8px;
     }
+    /* .contact-us-number span{
+        color:black;
+        font-size:14px;
+        padding-top:5px;    
+    } */
     .top-part-legal-container span{
-        color:#16003B;
+        color:#E00D7B;
         font-size:18px;
         font-weight:500;
     }
     .top-part-legal-container div{
-        color:#16003B;
+        color:#E00D7B;
         font-size:16px;
         font-weight:400;
         padding-left:16px;
@@ -67,14 +79,16 @@
     .bottom-part-conatct-us{
         display:flex;
         justify-content:center;
+        margin-top:50px;
+        padding-bottom:50px;
+        /* box-shadow:2px 4px 7px black; */
+        /* background-color: #f4eeff; */
     }
     .bottom-part-conatct-us div{
-        background-color:yellow;
-        padding:20px;
+        /* background-color:red; */
+        /* padding:20px; */
         width:50%;
-    }
-    .bottom-part-form{
-        width:100%;
+        /* box-shadow:2px 4px 7px black; */
     }
     .bottom-part-heading{
         font-size:25px;
@@ -82,9 +96,59 @@
         width:100%;
 
     }
+    form{
+        /* background-color:green; */
+        width:100%;
+    }
     input[type='text'], input[type='email']{
         padding:15px 0px;
         width:100%;
+        margin:8px;
+        border:2px solid #6B728E;
+        border-radius:8px;
+        font-size:16px;
+        font-weight:400;
+        padding-left:9px;
+    }
+    .contact-us-wrap{
+        width:100%;
+    }
+    .contact-us-wrap-validates-as-required{
+        padding:15px 2px;
+        width:102%;
+        margin:8px;
+        border:2px solid #6B728E;
+        border-radius:8px;
+        font-size:16px;
+        font-weight:400;
+        /* padding-left:9px; */
+    }
+    .contact-us-message{
+        padding:15px 0px;
+        background-color: solid #F0EEED;
+        width: 100%;
+        margin:8px;
+        border:2px solid #6B728E;
+        border-radius:8px;
+        font-size:16px;
+        font-weight:400;
+        padding-left:9px;
+    }
+    .contact-submit-button{
+        width:100%;
+    }
+    input[type='submit']{
+        padding:15px 10px;
+        background: solid #ffc7c7;
+        width:50%;
+        margin:8px;
+        /* border-color: solid pink; */
+        border:2px solid #f6318c;
+        border-radius:8px;
+        font-size:16px;
+        font-weight:200;
+        padding-left:9px;
+        /* margin-left:50%; */
     }
 
 
@@ -108,7 +172,7 @@
     <!-- Hero Section End-->
 
     <!-- Contact Us info start-->
-    <div clas="contact-us-info">
+    <div class="contact-us-info">
 
         <div class="top-part-conatct-us">
             <div class="top-part-information">  
@@ -116,22 +180,33 @@
                     <span>Reach Us</span>
                 </div>
                 <div class="top-part-legal-container">
-                    <i class="fa fa-map-marker" aria-hidden="true"></i><span> Address</span><br>
-                    <div>55 S/F, Panchkuian Marg,<br>Connaught Place, Delhi 110001</div>
+                    <i class="fa fa-map-marker" aria-hidden="true"></i>
+                    <span> Address</span>
+                    <div class=contact-us-address>
+                    <span style="color:#3f3b3b; font-size:14px; margin-top:25px">55 S/F, Panchkuian Marg,<br>Connaught Place, Delhi 110001</span>
+                    </div>
                 </div>
 
                 <div class="top-part-legal-container">
-                    <i class="fa fa-phone"></i><span> Call</span><br>
-                    <div>09580986118</div>               
+                    <i class="fa fa-phone"></i><span> Call</span>
+                    <div class="contact-us-number">
+                        <span style="color:#3f3b3b; font-size:14px; margin-top:25px">09580986118</span>
+                    </div>               
                 </div>
 
                 <div class="top-part-legal-container">
-                    <i class="fa fa-envelope" aria-hidden="true"></i><span> Email</span><br>
-                    <div>care@babymelon.in</div>
+                    <i class="fa fa-envelope" aria-hidden="true"></i>
+                    <span> Email</span>
+                    <div class="contact-us-emali">
+                        <span style="color:#3f3b3b; font-size:14px; margin-top:25px">care@babymelon.in</span>
+                    </div>
                 </div>
                 <div class="top-part-legal-container">
-                    <i class="fa fa-clock-o" aria-hidden="true"></i><span> Working hours</span><br>
-                    <div>Mon - Fri: 10:30 - 18:00</div>
+                    <i class="fa fa-clock-o" aria-hidden="true"></i>
+                    <span> Working hours</span>
+                    <div class="contact-us-working-hrs">
+                        <span style="color:#3f3b3b; font-size:14px; margin-top:25px">Mon - Fri: 10:30 - 18:00<</span>
+                    </div>
                 </div>
             </div>
             <div class="top-part-map">
@@ -149,15 +224,28 @@
                 <div class="bottom-part-heading">
                     <span>Feedback & Qurries</span>
                 </div>
-                <div class="bottom-part-form">
-                    <form action="" method="post">
-                        <input type="text" placeholder="Name"><br>
-                        <input type="email" placeholder="Email"><br>
-                        <input type="text" placeholder="+91 86378 15595"><br>
-                        <textarea rows="5" placeholder="Drop Your Message"></textarea><br>
-                        <button>Submit</button>
-                    </form>
-                </div>
+                <form action="" method="post">
+                    <input type="text" placeholder="Name">
+                    <input type="email" placeholder="Email">
+                    <input type="text" placeholder="+91 86378 15595">
+                    <span class="contact-us-wrap" data-name="menu">
+                        <select name="menu" class="contact-us-wrap-validates-as-required" aria-required="true" aria-invalid="false">
+                            <option value="Select an option">Select an option</option>
+                            <option value="An Order">An Order</option>
+                            <option value="A Product Inquiry">A Product Inquiry</option>
+                            <option value="Payment &amp; Placing Orders">Payment &amp; Placing Orders</option>
+                            <option value="I'm Having Trouble With Your Website">I'm Having Trouble With Your Website</option>
+                            <option value="A Marketing or Sales Request">A Marketing or Sales Request</option>
+                            <option value="PR Request">PR Request</option><option value="Others">Others</option>
+                        </select>
+                    </span>
+                    <textarea class="contact-us-message" cols="40" rows="10" placeholder="Drop Your Message"></textarea>
+                    <div class="contact-submit-button">
+                        <!-- <button>Submit</button> -->
+                        <input type="submit">
+                    </div>
+                </form>
+
             </div>
         </div>
 
