@@ -3,7 +3,7 @@
 $server_url_index = $_SERVER['HTTP_HOST'];
 
 // Local Server
-$for_local = '/babymelon_website/';
+$for_local = '/babymelon/';
 
 // Conection Details
 $servername = "localhost";
@@ -22,6 +22,8 @@ if ($base_name == 'index.php') {
     $page_name = 'Babymelon | Shop';
 } elseif ($base_name == 'login-signup.php') {
     $page_name = 'Babymelon | Account';
+}elseif ($base_name == 'contact.php') {
+    $page_name = 'Babymelon | Contact';
 }
 ?>
 
@@ -38,7 +40,7 @@ if ($base_name == 'index.php') {
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
     <title><?php echo $page_name; ?></title>
     <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
-
+    <link rel="shortcut icon" href="./bm_logo.jpeg" type="image/x-icon">
     <!-- Header Stylesheet include  -->
     <style>
     <?php
