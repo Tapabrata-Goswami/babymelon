@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="nav.css">
+</head>
+
+
+
+<body style="margin: 0;">
+
+    <div class="head-blank-area"></div>
+    <nav class="nav-main-header">
+
+        <div class="nav-logo"></div>
+        <div class="nav-list">
+            <ul>
+                <li id="home" class="nav-lists-item"> <a class="nav-lists-anchor other-color"
+                        href="<?php echo $for_local; ?>">Home</a></li>
+                <li id="shop" class="nav-lists-item"> <a class="nav-lists-anchor" href="shop.php">Shop</a></li>
+                <li id="about" class="nav-lists-item"> <a class="nav-lists-anchor" href="about.php">About</a></li>
+                <li id="blogs" class="nav-lists-item"> <a class="nav-lists-anchor" href="#">Blogs</a></li>
+            </ul>
+
+
+        </div>
+        <div class="account-bag-wish-options">
+            <div class="user-account">
+                <a href="login-signup.php" class="account-bag-wish-anchor">
+                    <i class="fa-regular fa-user"></i>
+                    <p class="user-bottom-text">account</p>
+                </a>
+            </div>
+            <div class="user-bag">
+                <a href="" class="account-bag-wish-anchor">
+                    <i class="fa-solid fa-cart-shopping" id="bg"></i>
+                    <!-- <p class="bag-bottom-text">Cart</p> --> 
+                    <div id="cartAmount" class="cartAmount">0</div>
+                </a>
+            </div>
+
+        </div>
+
+    </nav>
+    <div class="main">
+        <div class="contain">
+            <div class="contain_head">
+
+            </div>
+            <div class="contain_item">
+                <h1>shopping cart</h1> 
+                <div id="t_item">
+
+                    <p class="items" id="total_item">   
+                        
+                    </p> 
+                    <p id="it">items</p>
+                </div>
+
+            </div>
+            <div class="product_items" id="product_item"> 
+                
+                
+                
+
+
+            </div>
+
+        </div>
+        <div class="amount"> 
+            <div class="all"> 
+                <div class="address">
+                    <div>
+                        <h3>jhon</h3> 
+                        <address>your address</address>
+                    </div>
+                    <a href="">Edit</a>
+                </div> 
+                <div class="dicount">
+                    <h2>Do you have any discount code?</h2> 
+                    <p>only one discount code per order can be applied</p> 
+                    <form action=""> 
+                        <input type="text"> 
+                        <button>Apply</button>
+                    </form>
+                </div> 
+                <div class="total_amount">
+                    <div class="subtotal">
+                        <p>Subtotal</p> 
+                        <p><i class="fa-solid fa-indian-rupee-sign"></i>100</p>
+                    </div>  
+                    <div class="tax"> 
+                        <p>Tex</p> 
+                        <p><i class="fa-solid fa-indian-rupee-sign">100</i></p>
+                    </div>
+                    <div class="shipping">
+                        <p>Shipping Cost</p> 
+                        <p>FREE!</p>
+                    </div>  
+                    <div class="total_bill">
+                        <div class="total">
+                            <p id="tot">Total</p> 
+                            <p><i class="fa-solid fa-indian-rupee-sign" id="tp">100</i></p>
+                        </div>  
+                        <div>
+
+                            <button>CHECKOUT</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            
+
+        </div>
+
+    </div>
+
+</body>
+<script src="https://kit.fontawesome.com/061101a69a.js" crossorigin="anonymous"></script>
+<script src="nav.js"></script>
+
+</html>
