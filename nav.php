@@ -1,6 +1,6 @@
 <?php
 
-// session_start();
+session_start();
 // Live server 
 $server_url_index = $_SERVER['HTTP_HOST'];
 
@@ -66,13 +66,23 @@ if ($base_name == 'index.php') {
                 <li id="about" class="nav-lists-item"> <a class="nav-lists-anchor" href="about.php">About</a></li>
                 <li id="blogs" class="nav-lists-item"> <a class="nav-lists-anchor" href="#">Blogs</a></li>
             </ul>
-
-
-
         </div>
+
+
+<?php 
+
+    $_SESSION['user_name']= '';
+    $account_link = 'login-signup.php';
+    if( $_SESSION['user_name'] != NULL){
+        $account_link =  'account.php';
+    }
+
+?>
+
+
         <div class="account-bag-wish-options">
             <div class="user-account">
-                <a href="<?php echo htmlspecialchars($account_link); ?>" class="account-bag-wish-anchor">
+                <a href="<?php echo $account_link;?>" class="account-bag-wish-anchor">
                     <i class="fa-regular fa-user"></i>
                     <p class="user-bottom-text">account</p>
                 </a>
@@ -91,3 +101,4 @@ if ($base_name == 'index.php') {
 </body>
 
 </html>
+
