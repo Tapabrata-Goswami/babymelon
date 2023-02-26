@@ -6,12 +6,12 @@ let shopItem = [
         price: 200,
         img: "img/1.png"
     },
-    {
-        name: "productname",
-        id: "product2",
-        price: 150,
-        img: "img/2.png"
-    },
+    // {
+    //     name: "productname",
+    //     id: "product2",
+    //     price: 150,
+    //     img: "img/2.png"
+    // },
     {
         name:"productname" ,
         id:"product3" ,
@@ -32,27 +32,30 @@ let shops = () => {
     return (shop.innerHTML = shopItem.map((x) => {
         let { name, price, id, img } = x;
         let search = busket.find((x) => x.id === id) || [];
-        return ` 
-        <div class="pro" id="${id}">
-        <img width="80px" src="${img}" alt="">
-        <div class="name">
-            <div class="name_price">
-                <p>${name}</p>
-                <h2 class="pg" id="price"><i class="fa-solid fa-indian-rupee-sign"></i>${price}</h2>
-            </div>
-            <div class="qu">
-            <i onclick="inc(${id})" class="fa-solid fa-minus"></i>
-            <div  id="pro${id}">${search.item === undefined ? 0 : search.item}</div>
-            <i  onclick="myFunction(${id})"  class="fa-regular fa-plus"></i>
-
-            </div>
-        </div> 
-        <div class="remove_amount"> 
-            <div id="tot">${price * search.item}</div> 
-            <div onclick="remove(${id})" id="remove"><i class="fa-sharp fa-solid fa-xmark"></i></div>
-        </div>
-        </div> 
+        return `  
         
+        <div class="cart-products" id="${id}">
+        <img class="cart-product-thumbnil" width="120px" src="${img}" alt="">
+        <div class="cart-prooduct-details">
+            <div class="product-name_price">
+                <span>${name}</span><br>
+                <div class="cart-product-price-div"><span class="cart-product-price-original" id="price"><i class="fa-solid fa-indian-rupee-sign"></i>${price}</span>
+                </div>
+            </div>
+            <div class="cart-queinty-update">
+                <i onclick="inc(${id})" class="fa-solid fa-minus"></i>
+                <div class="product-count" id="pro${id}">${search.item === undefined ? 0 : search.item}</div>
+                <i  onclick="myFunction(${id})"  class="fa-regular fa-plus"></i>
+            </div>
+        </div> 
+        <div class="cart-remove_amount"> 
+            <div class="cart-total-amount"><span><i class="fa-solid fa-indian-rupee-sign" id="ti">${price * search.item}</i></span></div> 
+            <div onclick="remove(${id})" id="remove">
+                <i class="fa-sharp fa-solid fa-xmark"></i>
+            </div>
+        </div>
+    </div> 
+
         `
     }).join(""))
 }
@@ -75,8 +78,8 @@ let myFunction = (id) => {
     // console.log(busket)
     localStorage.setItem('data', JSON.stringify(busket))
     update(s) 
-    totalprice()
     shops() 
+    // totalprice()
 }
 let inc = (id) => {
     let s = id.id
@@ -95,7 +98,7 @@ let inc = (id) => {
     busket = busket.filter((x) => x.item !== 0)
     shops()
     localStorage.setItem('data', JSON.stringify(busket)) 
-    totalprice()
+    // totalprice()
 }
 // the is the update functions 
 let update = (id) => {
@@ -106,13 +109,16 @@ let update = (id) => {
     l.innerHTML = search.item
     // document.getElementById("tot").innerHTML=search.item
 
-    amount()
+    amount()  
+    totalprice()
+    
 
 }
 let amount = () => {
     let am = busket.map((x) => x.item).reduce((x, y) => x + y, 0)
     document.getElementById("total_item").innerHTML = am
-    document.getElementById("cartAmount").innerHTML = am
+    // document.getElementById("cartAmount").innerHTML = am 
+    // totalprice()
 }
 amount()
 
@@ -138,5 +144,5 @@ let totalprice = () => {
     
 }
 // console.log(totalprice()) 
- 
+// totalprice()
 shops()
