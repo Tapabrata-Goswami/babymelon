@@ -60,7 +60,7 @@ if ($base_name == 'index.php') {
                 <li id="home" class="nav-lists-item"> <a class="nav-lists-anchor other-color" href="<?php echo $for_local; ?>">Home</a></li>
                 <li id="shop" class="nav-lists-item"> <a class="nav-lists-anchor" href="shop.php">Shop</a></li>
                 <li id="about" class="nav-lists-item"> <a class="nav-lists-anchor" href="about.php">About</a></li>
-                <li id="blogs" class="nav-lists-item"> <a class="nav-lists-anchor" href="#">Blogs</a></li>
+                <li id="blogs" class="nav-lists-item"> <a class="nav-lists-anchor" href="./my-account.php">Blogs</a></li>
             </ul>
 
 
