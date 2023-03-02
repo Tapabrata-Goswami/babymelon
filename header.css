@@ -964,18 +964,37 @@ input[type="radio"] {
 
 /* Footer Part CSS End */ 
 
-/* navbar media query for 480-320px */ 
-@media only screen and (max-width: 480px)and(min-width:320px){
+/* navbar media query for 480-320px */  
+.nav-list-mb{
+    display: none;
+}
+@media only screen and (max-width: 480px){  
     .nav-list{
-        width: 50%; 
-        height: 100%; 
-        background: white;
+        display: none;
     } 
-    .nav-list ul{
+    .nav-list-mb{
         display: block; 
-        text-align: center;
+        width: 50%; 
+        height: 100vh; 
+        background: whitesmoke; 
+        position: absolute; 
+        top: 0; 
+        left: 0;
     } 
-    .nav-list ul li a{
-        color: #E00D7B;
+    .nav-list-mb ul{
+        display: flex; 
+        justify-content: center; 
+        align-items: center;
+        /* margin: auto;  */
+        flex-direction: column; 
+        border: 2px solid; 
+        width: 50%; 
+        z-index: 99999;
+        margin-left: -40px;
+    }
+    .nav-list-mb ul li {
+        list-style: none;
+        margin: 0;
+        padding: 0;
     }
 }

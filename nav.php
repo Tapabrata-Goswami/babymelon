@@ -69,7 +69,19 @@ if ($base_name == 'index.php') {
 
 
 
-        </div>
+        </div> 
+        <div class="nav-list-mb">
+            <ul>
+                <li id="home" class="nav-lists-item-mb"> <a class="nav-lists-anchor other-color" href="<?php echo $for_local; ?>">Home</a></li>
+                <li id="shop" class="nav-lists-item-mb"> <a class="nav-lists-anchor" href="shop.php">Shop</a></li>
+                <li id="about" class="nav-lists-item-mb"> <a class="nav-lists-anchor" href="about.php">About</a></li>
+                <li id="blogs" class="nav-lists-item-mb"> <a class="nav-lists-anchor" href="#">Blogs</a></li>
+            </ul>
+
+
+
+        </div> 
+        
         <div class="account-bag-wish-options">
             <div class="user-account">
                 <a href="<?php echo htmlspecialchars($account_link); ?>" class="account-bag-wish-anchor">
