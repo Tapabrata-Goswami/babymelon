@@ -10,7 +10,12 @@ $("#shop").click(()=>{
     remo()
     $(".sho").removeClass("bcl")
     $(".sho").addClass("cl")
-}) 
+})     
+}    
+/* and (min-width: 400px) */
+
+
+
 $("#about").click(()=>{  
     remo()
     $(".about").removeClass("bcl")

@@ -141,7 +141,7 @@ body{
 .product_items{
     width: 100%; 
     margin: 2% 0; 
-    /* border: 2px solid orchid; */
+    /* border: 2px solid orcand (min-width: 400px)hid; */
 }  
 .amount{
     width: 36%;
@@ -345,5 +345,7 @@ form button{
     font-size: 1.5rem;
     font-weight: bold;
     font-family: 'Roboto';
-} 
+}    
+/* and (min-width: 400px) */
+
 
