@@ -1,24 +1,4 @@
-<style>
 
-.about-top-banner {
-        background-position: center;
-        background-size: cover;
-        background-image: url(./img/banner.jpeg);
-        height: 310px;
-    }
-
-    .about-top-banner-heading {
-        color: #E00D7B;
-        font-weight: 600;
-        font-family: 'Poppins', sans-serif;
-        font-size: 55px;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-
-    }
-   </style>
 <?php
 $file_name = $_SERVER['SCRIPT_NAME'];
 

@@ -1,13 +1,3 @@
-<style>
-
-<?php
-
-include "footer.css";
-
-?>
-
-</style>
-
 <footer class="bottom-footer">
 	<div class="bottom-footer-container">
 		<div class="bottom-footer-row">

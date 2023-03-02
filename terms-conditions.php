@@ -4,50 +4,6 @@
 
 include 'nav.php';
 
-?>
-
-<style>
-
-
-    .aboutpage-banner-bottom-section {
-        padding: 60px 40px 50px 40px;
-        background-color: #f8f8ff;
-    }
-
-    .about-page-paragraph {
-        color: #646467;
-        text-align: justify;
-        font-size: 16px;
-        line-height: 29px;
-        font-weight: lighter;
-        font-family: 'Poppins', sans-serif;
-    }
-
-    .about-page-paragraph-heading {
-        color: black;
-        font-size: 24px;
-        font-weight: bolder;
-        font-family: 'Poppins', sans-serif;
-
-    }
-
-    .about-page-lists {
-        line-height: 29px;
-        color: #646467;
-        font-family: 'Poppins', sans-serif;
-    }
-    .privacy-policy-text-link{
-        color: #660a0a;
-        text-decoration: none;
-    }
-
-    .privacy-policy-text-link:hover{
-        color: #fa2d64;
-    }
-</style>
-
-<?php
-
 // Including hero-section
 
 include 'hero-section.php';

@@ -1,9 +1,11 @@
 <?php
+
+session_start();
 // Live server 
 $server_url_index = $_SERVER['HTTP_HOST'];
 
 // Local Server
-$for_local = '/babymelon_website/';
+$for_local = '/babymelon/';
 
 // Conection Details
 $servername = "localhost";
@@ -22,6 +24,8 @@ if ($base_name == 'index.php') {
     $page_name = 'Babymelon | Shop';
 } elseif ($base_name == 'login-signup.php') {
     $page_name = 'Babymelon | Account';
+}elseif ($base_name == 'contact.php') {
+    $page_name = 'Babymelon | Contact';
 }
 ?>
 
@@ -38,7 +42,7 @@ if ($base_name == 'index.php') {
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
     <title><?php echo $page_name; ?></title>
     <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
-
+    <link rel="shortcut icon" href="./bm_logo.jpeg" type="image/x-icon">
     <!-- Header Stylesheet include  -->
     <style>
     <?php
@@ -56,18 +60,17 @@ if ($base_name == 'index.php') {
 
         <div class="nav-logo"></div>
         <div class="nav-list">
-            <ul>
+            <ul class="nav-ul">
                 <li id="home" class="nav-lists-item"> <a class="nav-lists-anchor other-color" href="<?php echo $for_local; ?>">Home</a></li>
                 <li id="shop" class="nav-lists-item"> <a class="nav-lists-anchor" href="shop.php">Shop</a></li>
                 <li id="about" class="nav-lists-item"> <a class="nav-lists-anchor" href="about.php">About</a></li>
                 <li id="blogs" class="nav-lists-item"> <a class="nav-lists-anchor" href="./my-account.php">Blogs</a></li>
             </ul>
-
-
         </div>
+
         <div class="account-bag-wish-options">
             <div class="user-account">
-                <a href="login-signup.php" class="account-bag-wish-anchor">
+                <a href="<?php echo $account_link;?>" class="account-bag-wish-anchor">
                     <i class="fa-regular fa-user"></i>
                     <p class="user-bottom-text">account</p>
                 </a>
@@ -86,3 +89,4 @@ if ($base_name == 'index.php') {
 </body>
 
 </html>
+
