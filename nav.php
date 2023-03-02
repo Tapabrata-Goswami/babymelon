@@ -60,25 +60,13 @@ if ($base_name == 'index.php') {
 
         <div class="nav-logo"></div>
         <div class="nav-list">
-            <ul>
+            <ul class="nav-ul">
                 <li id="home" class="nav-lists-item"> <a class="nav-lists-anchor other-color" href="<?php echo $for_local; ?>">Home</a></li>
                 <li id="shop" class="nav-lists-item"> <a class="nav-lists-anchor" href="shop.php">Shop</a></li>
                 <li id="about" class="nav-lists-item"> <a class="nav-lists-anchor" href="about.php">About</a></li>
                 <li id="blogs" class="nav-lists-item"> <a class="nav-lists-anchor" href="#">Blogs</a></li>
             </ul>
         </div>
-
-
-<?php 
-
-    $_SESSION['user_name']= '';
-    $account_link = 'login-signup.php';
-    if( $_SESSION['user_name'] != NULL){
-        $account_link =  'account.php';
-    }
-
-?>
-
 
         <div class="account-bag-wish-options">
             <div class="user-account">
