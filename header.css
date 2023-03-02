@@ -962,4 +962,20 @@ input[type="radio"] {
     }
 }
 
-/* Footer Part CSS End */
+/* Footer Part CSS End */ 
+
+/* navbar media query for 480-320px */ 
+@media only screen and (max-width: 480px)and(min-width:320px){
+    .nav-list{
+        width: 50%; 
+        height: 100%; 
+        background: white;
+    } 
+    .nav-list ul{
+        display: block; 
+        text-align: center;
+    } 
+    .nav-list ul li a{
+        color: #E00D7B;
+    }
+}

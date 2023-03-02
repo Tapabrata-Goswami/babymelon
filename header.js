@@ -11,7 +11,7 @@ $("#shop").click(()=>{
     $(".sho").removeClass("bcl")
     $(".sho").addClass("cl")
 })     
-}    
+ 
 /* and (min-width: 400px) */
 
 
