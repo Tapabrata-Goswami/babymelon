@@ -41,7 +41,7 @@ if ($base_name == 'index.php') {
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
     <title><?php echo $page_name; ?></title>
-    <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+    <!-- <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script> -->
     <link rel="shortcut icon" href="./bm_logo.jpeg" type="image/x-icon">
     <!-- Header Stylesheet include  -->
     <style>
@@ -69,20 +69,26 @@ if ($base_name == 'index.php') {
 
 
 
-        </div> 
-        <div class="nav-list-mb">
-            <ul>
-                <li id="home" class="nav-lists-item-mb"> <a class="nav-lists-anchor other-color" href="<?php echo $for_local; ?>">Home</a></li>
-                <li id="shop" class="nav-lists-item-mb"> <a class="nav-lists-anchor" href="shop.php">Shop</a></li>
-                <li id="about" class="nav-lists-item-mb"> <a class="nav-lists-anchor" href="about.php">About</a></li>
-                <li id="blogs" class="nav-lists-item-mb"> <a class="nav-lists-anchor" href="#">Blogs</a></li>
-            </ul>
+        </div>  
+        <div class="nav-list-mb" id="nav-list-mb">
+            <div class="nav-list-mb-menu" >
+                <ul>
+                    <li id="home" class="nav-lists-item-mb"> <a class="nav-lists-anchor other-color" href="<?php echo $for_local; ?>">Home</a></li>
+                    <li id="shop" class="nav-lists-item-mb"> <a class="nav-lists-anchor" href="shop.php">Shop</a></li>
+                    <li id="about" class="nav-lists-item-mb"> <a class="nav-lists-anchor" href="about.php">About</a></li>
+                    <li id="blogs" class="nav-lists-item-mb"> <a class="nav-lists-anchor" href="#">Blogs</a></li>
+                </ul>
 
 
 
-        </div> 
+            </div> 
+            <div class="remove-nav-list-mb ">
+            <i class="fa-solid fa-xmark" id="remove"></i>
+            </div>  
+        </div>
         
         <div class="account-bag-wish-options">
+            
             <div class="user-account">
                 <a href="<?php echo htmlspecialchars($account_link); ?>" class="account-bag-wish-anchor">
                     <i class="fa-regular fa-user"></i>
@@ -94,12 +100,21 @@ if ($base_name == 'index.php') {
                     <i class="fa-solid fa-cart-shopping" style="color:black;"></i>
                     <p class="bag-bottom-text">Cart</p>
                 </a>
-            </div>
+            </div> 
+            
+            <div  class="hambar" id="hambar">
+                <i class="fa-solid fa-bars" id="cli"></i>
 
-        </div>
+            </div>
+            
+        </div>  
 
     </nav>
 
-</body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+</body>  
+<script src="new_head.js"></script>
+
+
 
 </html>
