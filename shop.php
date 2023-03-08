@@ -55,7 +55,7 @@ include 'nav.php';
                 if (!$database_conection) {
                     header("Location: http://localhost/babymelon_website/ ");
                 } else {
-                    $sql = "SELECT id, pimage1, name, regular_price, products_sale_per FROM bm_products";
+                    $sql = "SELECT id, pimage1, name, regular_price, products_sale_per,link FROM bm_products";
                     $result = mysqli_query($database_conection, $sql);
                     // echo $_SERVER["REQUEST_URI"];
                     
@@ -67,7 +67,10 @@ include 'nav.php';
                             $product_title = $row['name'];
                             $product_image = $row['pimage1'];
                             $product_price = $row['regular_price'];
-                            $product_sale_percent = $row['products_sale_per'];
+                            $product_sale_percent = $row
+                            ['products_sale_per'];
+                            $link_product = $row['id'];
+                            $link = $row['link'];
 
                             $product_sale_price = $product_price - ($product_price * ($product_sale_percent / 100));
 
@@ -114,20 +117,18 @@ include 'nav.php';
                                     <div>
                                         <span></span>
                                         <i class="fa-solid fa-cart-shopping style-cart-white"></i>
-                                        <a href="">Add to Cart</a>
+                                        <a href="<?php echo $link; ?>">Add to Cart</a>
                                     </div>
                                 </button>
                             </div>
                         </div>
             <?php
                     }
-                } else {
-                    echo "0 results";
-                }
+                } 
             }
 
 
-                
+  
 
 
 ?>
@@ -135,7 +136,6 @@ include 'nav.php';
 
 
 
-                ?>
 
 
             </div>
