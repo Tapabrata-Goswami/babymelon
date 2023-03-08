@@ -1,6 +1,6 @@
 <?php
 
-// session_start();
+session_start();
 // Live server 
 $server_url_index = $_SERVER['HTTP_HOST'];
 
@@ -60,37 +60,17 @@ if ($base_name == 'index.php') {
 
         <div class="nav-logo"></div>
         <div class="nav-list">
-            <ul>
+            <ul class="nav-ul">
                 <li id="home" class="nav-lists-item"> <a class="nav-lists-anchor other-color" href="<?php echo $for_local; ?>">Home</a></li>
                 <li id="shop" class="nav-lists-item"> <a class="nav-lists-anchor" href="shop.php">Shop</a></li>
                 <li id="about" class="nav-lists-item"> <a class="nav-lists-anchor" href="about.php">About</a></li>
-                <li id="blogs" class="nav-lists-item"> <a class="nav-lists-anchor" href="#">Blogs</a></li>
+                <li id="blogs" class="nav-lists-item"> <a class="nav-lists-anchor" href="blog.php">Blogs</a></li>
             </ul>
 
-
-
-        </div>  
-        <div class="nav-list-mb" id="nav-list-mb">
-            <div class="nav-list-mb-menu" >
-                <ul>
-                    <li id="home" class="nav-lists-item-mb"> <a class="nav-lists-anchor other-color" href="<?php echo $for_local; ?>">Home</a></li>
-                    <li id="shop" class="nav-lists-item-mb"> <a class="nav-lists-anchor" href="shop.php">Shop</a></li>
-                    <li id="about" class="nav-lists-item-mb"> <a class="nav-lists-anchor" href="about.php">About</a></li>
-                    <li id="blogs" class="nav-lists-item-mb"> <a class="nav-lists-anchor" href="#">Blogs</a></li>
-                </ul>
-
-
-
-            </div> 
-            <div class="remove-nav-list-mb ">
-            <i class="fa-solid fa-xmark" id="remove"></i>
-            </div>  
-        </div>
-        
         <div class="account-bag-wish-options">
             
             <div class="user-account">
-                <a href="<?php echo htmlspecialchars($account_link); ?>" class="account-bag-wish-anchor">
+                <a href="<?php echo $account_link;?>" class="account-bag-wish-anchor">
                     <i class="fa-regular fa-user"></i>
                     <p class="user-bottom-text">account</p>
                 </a>
@@ -118,3 +98,4 @@ if ($base_name == 'index.php') {
 
 
 </html>
+

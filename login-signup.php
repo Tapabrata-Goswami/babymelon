@@ -3,7 +3,7 @@
 ?>
 
 <?php
-session_start();
+// session_start();
 
 // Navbar including
 include('nav.php');
@@ -77,7 +77,7 @@ $name = $contact_number = $email = $user_password = $conforim_password = "";
 
 // login Request to database
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-  $log_email = $log_password = "";
+  // $log_email = $log_password = "";
 
   $log_email = $_POST['log_email'];
   $log_password = $_POST['log_u_password'];
@@ -94,7 +94,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
       while ($row = mysqli_fetch_assoc($data_fetch)) {
         if (($log_email === $row['email']) and ($log_password === $row['password'])) {
           $_SESSION['user_name'] = $row['name'];
-          // header('Location:account.php');
           echo '<script>window.open("http://localhost/babymelon/account.php", "_self"); </script>';
         }
       }

@@ -1,10 +1,11 @@
 <?php
-session_start();
+// session_start();
 include('nav.php');
 include ('db_acess.php');
 ?>
 
 <section class="account">
+    
     <?php 
         echo "Name : ".$_SESSION['user_name'];
     ?>
