@@ -1,13 +1,8 @@
  <?php
-
     // Including nav bar
-
     include 'nav.php';
-
     // Including hero-section
-
     include 'hero-section.php';
-
     ?>
 
  <div class="aboutpage-banner-bottom-section">

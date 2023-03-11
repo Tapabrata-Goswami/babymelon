@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Gloock&display=swap');
+
+.single-blog-page {
+    display: flex;
+    justify-content: center;
+    padding: 0px 50px;
+    font-family: 'Poppins';
+}
+
+.blog-content {
+    width: 80%;
+    /* align-items: center; */
+    background-color: rgb(255, 255, 255);
+    padding: 30px;
+}
+
+.blog-heading {
+    font-size: 55px;
+    font-weight: 190px;
+    text-align: center;
+    color: rgb(44, 44, 44);
+    font-family: 'Gloock', serif;
+    padding: 10px 20px;
+}
+
+.blog-image {
+    display: flex;
+    justify-content: center;
+    padding: 20px 20px 30px 20px;
+}
+
+.blog-imges-main {
+    border-radius: 41px;
+}
+
+
+
+.suggest-product {
+    display: flex;
+    justify-content: right;
+    flex-direction: row-reverse;
+    align-items: center;
+    padding: none;
+}
+.blog-paragraph{
+    padding:15px;
+    background-color: antiquewhite;
+    border-radius: 15px;
+}
+.blog-paragraph p{
+    font-size:18px;
+    font-weight: 400;
+
+    /* padding:15px;
+    background-color: antiquewhite; */
+}
