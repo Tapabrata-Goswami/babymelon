@@ -80,11 +80,41 @@ if ($base_name == 'index.php') {
                     <i class="fa-solid fa-cart-shopping" style="color:black;"></i>
                     <p class="bag-bottom-text">Cart</p>
                 </a>
+            </div> 
+            <div class="hambar" id="hambar">
+                <i class="fa-solid fa-bars" id="cli"></i>
             </div>
 
         </div>
 
+        <div class="nav-list-mb" id="nav-list-mb">
+            <div class="nav-list-mb-menu" >
+                <ul>
+                    <li id="home" class="nav-lists-item-mb"> <a class="nav-lists-anchor other-color" href="<?php echo $for_local; ?>">Home</a></li>
+                    <li id="shop" class="nav-lists-item-mb"> <a class="nav-lists-anchor" href="shop.php">Shop</a></li>
+                    <li id="about" class="nav-lists-item-mb"> <a class="nav-lists-anchor" href="about.php">About</a></li>
+                    <li id="blogs" class="nav-lists-item-mb"> <a class="nav-lists-anchor" href="#">Blogs</a></li>
+                </ul>
+
+
+
+            </div> 
+            <div class="remove-nav-list-mb ">
+            <i class="fa-solid fa-xmark" id="remove"></i>
+            </div>  
+        </div>
+        
+        
+
     </nav>
+
+
+    </nav>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+</body>  
+<script src="new_head.js"></script>
+
 
 </body>
 
