@@ -1,4 +1,5 @@
-<footer class="bottom-footer">
+ 
+ <footer class="bottom-footer">
 	<div class="bottom-footer-container">
 		<div class="bottom-footer-row">
 			<div class="bottom-footer-col">

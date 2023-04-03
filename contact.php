@@ -14,9 +14,13 @@
         display:flex;
         justify-content:center;
         padding:80px 100px;
+        background-image:url('./babymelon_cover.jpg');
+        background-position: 0 -300px;
+        background-size:cover;
         background-color:#ffe2ea;
     }
     .contact-title{
+        margin-top:50px;
         display:flex;
         justify-content:center;
     }
@@ -25,7 +29,7 @@
         font-weight:600;
         color:#E00D7B;
     }
-    .contact-subtitle p{
+    .contact-subtitle span{
         font-size:18px;
         font-weight:500;
     }
@@ -54,20 +58,18 @@
     }
     .top-part-heading-info span{
         color:#E00D7B;
-        font-size:25px;
+        font-size:33px;
         font-weight:600;
     }
     .top-part-legal-container{
         margin-bottom:8px;
     }
-    /* .contact-us-number span{
-        color:black;
-        font-size:14px;
-        padding-top:5px;    
-    } */
+    .contact-us-number,.contact-us-address, .contact-us-emali{
+        padding-bottom:14px;
+    }
     .top-part-legal-container span{
         color:#E00D7B;
-        font-size:18px;
+        font-size:22px;
         font-weight:500;
     }
     .top-part-legal-container div{
@@ -91,9 +93,14 @@
         /* box-shadow:2px 4px 7px black; */
     }
     .bottom-part-heading{
-        font-size:25px;
-        font-weight:600;
         width:100%;
+        padding-bottom:20px;
+        margin-left:9px;
+    }
+    .bottom-part-heading span{
+        font-size:33px;
+        font-weight:600;
+        border-bottom:3px solid #E00D7B;
 
     }
     form{
@@ -104,11 +111,13 @@
         padding:15px 0px;
         width:100%;
         margin:8px;
-        border:2px solid #6B728E;
+        border:none;
+        /* border:2px solid #6B728E; */
         border-radius:8px;
         font-size:16px;
         font-weight:400;
         padding-left:9px;
+        box-shadow:0px 0px 8px #757a79
     }
     .contact-us-wrap{
         width:100%;
@@ -139,16 +148,24 @@
     }
     input[type='submit']{
         padding:15px 10px;
-        background: solid #ffc7c7;
+        background-color:#9d53c3;
         width:50%;
         margin:8px;
+        border:none;
         /* border-color: solid pink; */
-        border:2px solid #f6318c;
+        /* border:2px solid #f6318c; */
         border-radius:8px;
-        font-size:16px;
+        font-size:18px;
         font-weight:200;
         padding-left:9px;
+        color:white;
+        box-shadow: 0px 4px 9px #5c5470;
         /* margin-left:50%; */
+    }
+    input[type='submit']:hover{
+        cursor:pointer;
+        background-color:#E00D7B;
+        transition: 0.8s ease;
     }
 
 
@@ -165,7 +182,7 @@
                 </span>
             </div>
             <div class="contact-subtitle">
-                <p>Have any issue? We'd love to hear from you.</p>
+                <span>Have any issue? We'd love to hear from you.</span>
             </div>
         </div>
     </div>
@@ -182,15 +199,15 @@
                 <div class="top-part-legal-container">
                     <i class="fa fa-map-marker" aria-hidden="true"></i>
                     <span> Address</span>
-                    <div class=contact-us-address>
-                    <span style="color:#3f3b3b; font-size:14px; margin-top:25px">55 S/F, Panchkuian Marg,<br>Connaught Place, Delhi 110001</span>
+                    <div class="contact-us-address">
+                    <span style="color:#3f3b3b; font-weight:400; font-size:18px; margin-top:25px; letter-spacing:1px;word-spacing:2px; letter-height:4px; ">55 S/F, Panchkuian Marg,<br>Connaught Place, Delhi 110001</span>
                     </div>
                 </div>
 
                 <div class="top-part-legal-container">
                     <i class="fa fa-phone"></i><span> Call</span>
                     <div class="contact-us-number">
-                        <span style="color:#3f3b3b; font-size:14px; margin-top:25px">09580986118</span>
+                        <span style="color:#3f3b3b; font-weight:400; font-size:18px; margin-top:25px; letter-spacing:1px;word-spacing:2px; letter-height:4px; ">+ 91 95809 86118</span>
                     </div>               
                 </div>
 
@@ -198,14 +215,14 @@
                     <i class="fa fa-envelope" aria-hidden="true"></i>
                     <span> Email</span>
                     <div class="contact-us-emali">
-                        <span style="color:#3f3b3b; font-size:14px; margin-top:25px">care@babymelon.in</span>
+                        <span style="color:#3f3b3b; font-weight:400; font-size:18px; margin-top:25px; letter-spacing:1px;word-spacing:2px; letter-height:4px; ">care@babymelon.in</span>
                     </div>
                 </div>
                 <div class="top-part-legal-container">
                     <i class="fa fa-clock-o" aria-hidden="true"></i>
                     <span> Working hours</span>
                     <div class="contact-us-working-hrs">
-                        <span style="color:#3f3b3b; font-size:14px; margin-top:25px">Mon - Fri: 10:30 - 18:00<</span>
+                        <span style="color:#3f3b3b; font-weight:400; font-size:18px; margin-top:25px; letter-spacing:1px;word-spacing:2px; letter-height:4px;  ">Mon - Fri: 10:30 - 18:00</span>
                     </div>
                 </div>
             </div>
@@ -250,10 +267,10 @@
         </div>
 
     </div>
-    <!-- Contact Us info start-->
+    <!-- Contact Us info end-->
 </section>
 
-<!-- End Cotact -->
+<!-- End Contact -->
 <?php
     include ('footer.php');
 ?>

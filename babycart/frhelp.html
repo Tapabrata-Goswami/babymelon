@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title> 
+    <style>
+        div{
+            display: flex; 
+            margin: 10px;
+        } 
+        #listp{
+            margin:10px 20px ;
+            padding: 10px 15px; 
+            background: hotpink;
+            color: white;
+        } 
+        #addp{
+            margin:10px 20px ;
+            padding: 10px 15px; 
+            background: hotpink;
+            color: white;
+        } 
+        .block{
+            display: none;
+        } 
+        
+    </style>
+</head>
+<body> 
+
+    <div>
+        <button id="listp">list product</button> 
+        <button id="addp" >add product</button>
+    </div> 
+    <div id="listpro"> 
+       <h1>here have the all product</h1>
+
+    </div> 
+    <div id="addpro">
+        <form action=""> 
+           name: <input type="text"> 
+           <input type="radio">
+        </form>
+    </div>
+</body> 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script> 
+<script>
+    $("#listp").click(()=>{
+        $("#addpro").addClass("block") 
+        $("#listpro").removeClass("block")
+    }) 
+    $("#addp").click(()=>{
+        $("#addpro").removeClass("block") 
+        $("#listpro").addClass("block") 
+    })
+</script>
+</html>
